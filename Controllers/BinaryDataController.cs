@@ -41,6 +41,7 @@ namespace BinaryFormatterExample.Controllers
         {
             var list = new List<SampleData>();
             var createdAt = new Guid("4E8CD131-A55A-49F1-964C-FAB057919EBE");
+            var modifiedAt = new Guid("A7695D5A-E07E-4AA3-8040-5F30411EACD9");
             for (var i = 0; i < 2000; i++)
             {
                 list.Add(new SampleData
@@ -48,9 +49,9 @@ namespace BinaryFormatterExample.Controllers
                     Created = DateTime.Now,
                     CreatedAt = createdAt,
                     Description = "desc",
-                    Id = new Guid("AAEAE6FC-6248-48B8-8636-7858CD3139B9"),
+                    Id = Guid.NewGuid(),
                     Modified = DateTime.Now,
-                    ModifiedAt = new Guid("A7695D5A-E07E-4AA3-8040-5F30411EACD9"),
+                    ModifiedAt = modifiedAt,
                     Title = "title"
                 });
             }
